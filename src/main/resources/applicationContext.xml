@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="product" class="org.example.Product">
+            <property name="id" value="1"></property>
+            <property name="name" value="元谋人"></property>
+            <property name="subTitle" value="最older的people"></property>
+            <property name="price" value="648"></property>
+        </bean>
+    <bean id="productServlet" class="org.example.ProductServletImpl"></bean>
+        <bean id="productController" class="org.example.ProductController">
+            <property name="producrServlet" ref="productServlet"></property>
+        </bean>
+</beans>
